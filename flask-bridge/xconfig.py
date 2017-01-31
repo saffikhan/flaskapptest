@@ -1,0 +1,10 @@
+# Does not work with [0.0.0.0]
+SITE_SERVER_HOST = 'localhost'
+SITE_SERVER_PORT = 5001
+
+EXTERNAL_SERVER_HOST = 'localhost'
+EXTERNAL_SERVER_PORT = 5002
+
+
+SAMPLE_DATA_MAX = 5000
+
