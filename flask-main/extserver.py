@@ -10,9 +10,21 @@ for i in range(xconfig.SAMPLE_DATA_MAX):
     }
 
 
-@app.route('/', methods=['GET'])
-def testGet():
-    return jsonify({'hint': 'This is an example hint for GET testing purposes 123abc'})
+@app.route('/stats', methods=['GET'])
+def test():
+    return jsonify({'message' : 'It works!'})
+
+@app.route('/statsa', methods = ['GET'])
+def api_hello():
+    data = {
+        'number' : 3
+    }
+    js = json.dumps(data)
+
+    resp = Response(js, status=200, mimetype='application/json')
+    resp.headers['Link'] = 'http://luisrei.com'
+
+    return resp
 
 
 @app.route('/', methods=['POST'])
